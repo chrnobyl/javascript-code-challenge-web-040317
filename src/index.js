@@ -1,3 +1,8 @@
 $(document).ready(function(){
-  // your code here!
+  $('#note-form').on('submit', function(event){
+    event.preventDefault()
+    var comment = new Comment
+    comment.content = $('#inputText').val()
+    $('#comment-list').append('<div>' + comment.content + '</div>')
+  })
 })
